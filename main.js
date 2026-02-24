@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         tableBody.appendChild(row);
-        clock(person.Name, person.Rel-Time)
+        clock(person.Name, person.Rel_Time)
       });
 
     })
@@ -33,7 +33,7 @@ function updateTimes() {
     .then(response => response.json())
     .then(data => {
       data.people.forEach(person => {
-        clock(person.Name, person.Rel-Time)
+        clock(person.Name, person.Rel_Time)
       });
     })
 
