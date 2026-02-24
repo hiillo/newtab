@@ -8,22 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const now = new Date();
         let hours = now.getHours();
+        let tableBody = "";
 
-        if(Math.floor((hours+difference)/12)%2 == 1){
-          const tableBody = document.querySelector("#pm tbody");
+        if(Math.floor((hours+difference+12)/12)%2 == 0){
+          tableBody = document.querySelector("#pm tbody");
         }
         else{
-          const tableBody = document.querySelector("#am tbody");
+          tableBody = document.querySelector("#am tbody");
         }
 
         const row = document.createElement("tr");
         
         row.innerHTML = `
-          <a href = discord://-/channels/@me/${person.discord}>
-          <td><img src = image/${person.Name}.webp></td>
-          <td>${person.Name}</td>
-          <td id = ${person.Name}></td>
-          </a>
+          <td>
+          <div href = discord://-/channels/@me/${person.discord}>
+            <img src = image/${person.Name}.webp>
+            <p>${person.Name}</p>
+            <p id = ${person.Name}></p>
+          </div>
+          </td>
         `;
 
         tableBody.appendChild(row);
@@ -57,7 +60,7 @@ function clock(target, difference){
   let seconds = now.getSeconds().toString();
   console.log(hours + difference, difference)
   let state = ""
-  if(Math.floor((hours+difference)/12)%2 == 1){
+  if(Math.floor((hours+difference+12)/12)%2 == 0){
      state = "pm"
 
   }
