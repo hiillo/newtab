@@ -2,12 +2,12 @@
   "people": [
     
     { "Name": "super",  
-      "Rel_Time": -12 
+      "RelTime": -12 
     },
     
     { 
     "Name": "test", 
-    "Rel_Time": 19 
+    "RelTime": 19 
     }
 
 
