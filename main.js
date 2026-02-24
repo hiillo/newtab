@@ -76,5 +76,6 @@ function clock(target, difference){
 
 clock("main", 0)
 
+setInterval(() => clock(main, 0),1000)
 setInterval(updateTimes, 1000);
 
