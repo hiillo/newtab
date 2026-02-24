@@ -47,7 +47,7 @@ function clock(target, difference){
   let hours = now.getHours();
   let minutes = now.getMinutes().toString();
   let seconds = now.getSeconds().toString();
-  console.log(hours +difference)
+  console.log(hours + difference, difference)
   let state = ""
   if(Math.floor((hours+difference)/2)%2 == 1){
      state = "am"
@@ -65,5 +65,5 @@ function clock(target, difference){
 
 clock("main", 0)
 
-setInterval(updateTimes, 10000);
+setInterval(updateTimes, 1000);
 
