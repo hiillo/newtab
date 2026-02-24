@@ -4,11 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("data.json")
     .then(response => response.json())
     .then(data => {
-
-      const tableBody = document.querySelector("#userTable tbody");
-
       data.people.forEach(person => {
 
+        const now = new Date();
+        let hours = now.getHours();
+
+        if(Math.floor((hours+difference)/12)%2 == 1){
+          const tableBody = document.querySelector("#pm tbody");
+        }
+        else{
+          const tableBody = document.querySelector("#am tbody");
+        }
 
         const row = document.createElement("tr");
         
@@ -39,7 +45,6 @@ function updateTimes() {
 
 }
 
-
 //Clock format & math
 function clock(target, difference){
   const now = new Date();
@@ -49,12 +54,12 @@ function clock(target, difference){
   let seconds = now.getSeconds().toString();
   console.log(hours + difference, difference)
   let state = ""
-  if(Math.floor((hours+difference)/2)%2 == 1){
-     state = "am"
+  if(Math.floor((hours+difference)/12)%2 == 1){
+     state = "pm"
 
   }
   else{
-    state = "pm"
+    state = "am"
   }
   
   hours = ((hours + difference)%12).toString();
