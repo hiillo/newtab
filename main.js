@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let hours = now.getHours();
         let tableBody = "";
 
-        if(Math.floor((hours+difference+12)/12)%2 == 0){
+        if(Math.floor((hours+${person.RelTime}+12)/12)%2 == 0){
           tableBody = document.querySelector("#pm tbody");
         }
         else{
@@ -58,11 +58,9 @@ function clock(target, difference){
   let hours = now.getHours();
   let minutes = now.getMinutes().toString();
   let seconds = now.getSeconds().toString();
-  console.log(hours + difference, difference)
   let state = ""
   if(Math.floor((hours+difference+12)/12)%2 == 0){
      state = "pm"
-
   }
   else{
     state = "am"
