@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let hours = now.getHours();
         let tableBody = "";
 
-        if(Math.floor((hours+${person.RelTime}+12)/12)%2 == 0){
+        if(Math.floor((hours+person.RelTime+12)/12)%2 == 0){
           tableBody = document.querySelector("#pm tbody");
         }
         else{
@@ -21,11 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
         
         row.innerHTML = `
           <td>
-          <div href = discord://-/channels/@me/${person.discord}>
+          <a href = discord://-/channels/@me/${person.discord} >
+          <div>
             <img src = image/${person.Name}.webp>
             <p>${person.Name}</p>
             <p id = ${person.Name}></p>
           </div>
+          </a>
           </td>
         `;
 
