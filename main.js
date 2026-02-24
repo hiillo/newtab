@@ -19,8 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const row = document.createElement("tr");
         
         row.innerHTML = `
+          <a href = discord://-/channels/@me/${person.discord}>
+          <td><img src = image/${person.Name}.webp></td>
           <td>${person.Name}</td>
           <td id = ${person.Name}></td>
+          </a>
         `;
 
         tableBody.appendChild(row);
