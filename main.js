@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         row.innerHTML = `
           <td>
-          <a href = discord://-/channels/@me/${person.discord}>
+          <a id = "elements" href = discord://-/channels/@me/${person.discord}>
           <div>
             <img src = image/${person.Name}.webp>
             <p>${person.Name}</p>
