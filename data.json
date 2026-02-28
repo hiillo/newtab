@@ -1,16 +1,80 @@
 {
   "people": [
-    
-    { "Name": "super",  
-      "RelTime": -12,
-      "discord": 1421634150137335895
+    { 
+      "Name": "Khiran", 
+      "RelTime": -21, 
+      "discord": "1477146177106346127",
+      "desc": ""
+    },
+    { 
+      "Name": "winter", 
+      "RelTime": -21, 
+      "discord": "1447520169189703771",
+      "desc": ""
+
     },
     
+    { "Name": "super",  
+      "RelTime": -18,
+      "discord": "1421634150137335895",
+      "desc": ""
+
+    },
+    { "Name": "puddles",  
+      "RelTime": -18,
+      "discord": "1437959884200083559",
+      "desc": ""
+
+    },
+    { "Name": "jackwood",  
+      "RelTime": -18,
+      "discord": "1313041464321773649",
+      "desc": ""
+
+    },
     { 
-    "Name": "Khiran", 
-    "RelTime": -21 
+      "Name": "maya", 
+      "RelTime": -16, 
+      "discord": "1228553715385106472",
+      "desc": ""
+
+    },
+    { 
+      "Name": "megal", 
+      "RelTime": -6, 
+      "discord": "1083313718168932452",
+      "desc": ""
+
+    },
+    { 
+      "Name": "codex", 
+      "RelTime": -5, 
+      "discord": "1364823335313342545",
+      "desc": ""
+
+    },
+    { 
+      "Name": "Kawfi", 
+      "RelTime": -2, 
+      "discord": "1186976865953521665",
+      "desc": ""
+
     }
 
 
+  ],
+  "eventtimeline": [
+    {
+      "name": "Biosci Exam First half",
+      "desc": "Thusday 23 april 6:30 8:00pm<br> Cover content from lectures 1-14",
+      "time": "2026-04-23",
+      "link": "https://canvas.auckland.ac.nz/courses/140858/pages/lecture-resources"
+    },
+    {
+      "name": "Biosci Exam second half",
+      "desc": "thursday 11 june  - monday june 2026 <br> Cover content from lectures 1-14",
+      "time": "2026-6-01",
+      "link": "https://canvas.auckland.ac.nz/courses/140858/pages/lecture-resources"
+    }
   ]
 }
