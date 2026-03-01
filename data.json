@@ -78,9 +78,22 @@
     },
     {
       "name": "Biosci Exam second half",
-      "desc": "thursday 11 june  - monday june 2026 <br> Cover content from lectures 1-14",
+      "desc": "thursday 11 june  - monday june 2026 <br> Cover content from lectures 15-33",
       "time": "2026-6-01",
       "link": "https://canvas.auckland.ac.nz/courses/140858/pages/lecture-resources"
+    },
+    {
+      "name": "term test chem110",
+      "desc": "27 april covering content up to class 21 workshop7",
+      "time": "2026-04-27",
+      "link": "https://canvas.auckland.ac.nz/courses/140770/pages/etahi-ra-nui-%7C-course-schedule-2"
+    },
+    {
+      "name": "final test chem110",
+      "desc": "june 9 covering all content",
+      "time": "2026-06-09",
+      "link": "https://canvas.auckland.ac.nz/courses/140770/pages/etahi-ra-nui-%7C-course-schedule-2"
     }
+
   ]
 }
