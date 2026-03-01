@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error("Error loading JSON:", error));
   timeline();
+  sidetimeline();
 });
 
 //timeline thingy
@@ -81,6 +82,47 @@ function timeline(){
     .catch(error => console.error("Error loading JSON:", error));
 }
 
+function sidetimeline(){
+  const now = new Date();
+  fetch("courses_all.json")
+    .then(response => response.json())
+    .then(data => {
+      data = Object.values(data).flat();
+      console.log(data)
+      const filteredEvents = data
+        .filter(events => {
+          const eventTime = new Date(events.all_day_date).getTime();
+          return (eventTime - now) / (1000 * 60 * 60 * 24) >= -5;
+        })
+        .sort((a, b) => new Date(a.all_day_date) - new Date(b.all_day_date));
+      console.log(filteredEvents)
+      filteredEvents.forEach(events => {
+
+        let eventtime = new Date(events.all_day_date);
+        let days2 = Math.floor((eventtime - now)/(1000 * 60 * 60 * 24));
+
+        const target = document.querySelector("#minilist");
+
+        const row = document.createElement("a");
+        row.className = "mini_group";
+        row.href = events.html_url;
+        row.innerHTML = `
+          <div class = event-content>
+            <div class = event-title>
+              <h3 class = event-name>${events.title}</h3>
+              <p class = event-time>${days2} day(s)</p>
+            </div>
+            <p class = event-time>${events.submission_types}</p>
+            <p class = event-desc>${events.context_name}</p>
+          </div>
+        `;
+
+        target.appendChild(row);
+      });
+
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+}
 
 //Update people
 function updateTimes() {
