@@ -92,7 +92,7 @@ function sidetimeline(){
       const filteredEvents = data
         .filter(events => {
           const eventTime = new Date(events.all_day_date).getTime();
-          return (eventTime - now) / (1000 * 60 * 60 * 24) >= -5;
+          return (eventTime - now) / (1000 * 60 * 60 * 24) >= -3;
         })
         .sort((a, b) => new Date(a.all_day_date) - new Date(b.all_day_date));
       console.log(filteredEvents)
