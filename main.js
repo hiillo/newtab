@@ -174,6 +174,6 @@ date()
 
 clock("main", 0)
 
-setInterval(() => clock("main", 0),1000)
+setInterval(() => clock("main", 0),30000)
 setInterval(updateTimes, 10000);
 
